@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydra - The Chess Engine of the Future</title>
+  <style>
+    /* Custom CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333333;
+    }
+
+    #hero {
+      background-color: #272727;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    #hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    #hero button {
+      background-color: #ffffff;
+      color: red;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #hero button:hover {
+      background-color: #dddddd;
+    }
+
+    #about {
+      background-color: #ffffff;
+      padding: 50px;
+    }
+
+    #about h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: red;
+    }
+
+    #about p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    #strengths {
+        background-color: #272727;
+        padding: 50px;
+        color: white;
+    }
+
+    #strengths h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: red;
+    }
+
+    #strengths ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    #fallacies {
+        background-color: #f5f5f5;
+        padding: 50px;
+    }
+
+    #fallacies h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: red;
+    }
+
+    footer {
+      background-color: #272727;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    #typewriterElement {
+        display: inline;
+        color: red;
+    }
+  </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to Hydra - The Chess Engine of <div id="typewriterElement"></div></h1>
+        <p>Play against an advanced chess engine powered by cutting-edge AI algorithms, written purely in JavaScript.</p>
+        <button onclick="location.href='/gui.html'">Play Now</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>The Trailblazer Club is proud to present Hydra, the next-generation chess engine that combines the power of
+            artificial intelligence with unparalleled strategic thinking.</p>
+        <p>With Hydra, you can experience the thrill of playing against an incredibly strong and adaptable opponent. Our
+            engine utilizes state-of-the-art algorithms to provide you with a challenging and engaging chess experience.</p>
+        <p>Whether you're a beginner looking to improve your skills or an experienced player seeking a worthy adversary,
+            Hydra is here to offer a stimulating and enjoyable chess experience for players of all levels.</p>
+    </section>
+
+    <!-- Strengths Section -->
+    <section id="strengths">
+        <h2>Strengths of Hydra</h2>
+        <ul>
+            <li>Strong positional awareness</li>
+            <li>Advanced evaluation techniques</li>
+            <li>Adjustable depth for varying levels of difficulty</li>
+        </ul>
+    </section>
+
+    <!-- Fallacies Section -->
+    <section id="fallacies">
+        <h2>Fallacies of Hydra</h2>
+        <p>While Hydra possesses impressive capabilities, it does have a few limitations:</p>
+        <ul>
+            <li>Takes a significant amount of time at higher depths</li>
+        </ul>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 The Trailblazer Club. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+        var typewriterElement = document.getElementById('typewriterElement');
+
+        var typewriter = new Typewriter(typewriterElement, {
+            loop: true
+        });
+
+        typewriter.typeString('The Future')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Smart People')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('The Trailblazers')
+            .pauseFor(2500)
+            .start();
+    </script>
+
+</body>
+</html>

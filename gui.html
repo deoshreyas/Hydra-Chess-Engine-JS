@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play against Hydra Chess Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/chessboard-element?module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+        integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+<body>
+    <div class="controls-form">
+        <form id="controls">
+            <h1>Controls</h1>
+
+            <div id="depthField">
+                <h2>Depth:</h2>
+                <input type="number" name="depth" id="depth" min="1" max="10" required>
+            </div>
+
+            <button type="submit" class="submit">PLAY</button>
+        </form>
+    </div>
+    <div class="chessboard">
+        <chess-board position="start" draggable-pieces></chess-board>
+    </div>
+    <div class="info">
+        <progress id="eval" max="4000" value="2000"></progress>
+        <div id="result"></div>
+        <div id="positionCountInfo"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
